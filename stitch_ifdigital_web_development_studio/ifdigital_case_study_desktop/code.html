@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"on-surface-variant": "#44474d", "surface": "#f7f9fb", "on-primary-container": "#7684a0", "on-primary": "#ffffff", "tertiary-container": "#001a42", "tertiary-fixed": "#d8e2ff", "surface-container-highest": "#e0e3e5", "secondary-fixed": "#dbe1ff", "secondary-container": "#316bf3", "surface-variant": "#e0e3e5", "on-secondary-fixed": "#00174b", "on-primary-fixed": "#0d1c33", "error": "#ba1a1a", "on-secondary": "#ffffff", "surface-container": "#eceef0", "surface-container-lowest": "#ffffff", "inverse-surface": "#2d3133", "primary-fixed-dim": "#b9c7e5", "inverse-primary": "#b9c7e5", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#394760", "secondary-fixed-dim": "#b4c5ff", "on-background": "#191c1e", "tertiary": "#000000", "error-container": "#ffdad6", "primary": "#000000", "primary-container": "#0d1c33", "on-tertiary-fixed": "#001a42", "on-tertiary-container": "#3980f4", "surface-container-low": "#f2f4f6", "on-error": "#ffffff", "tertiary-fixed-dim": "#adc6ff", "surface-tint": "#515f79", "surface-container-high": "#e6e8ea", "primary-fixed": "#d6e3ff", "inverse-on-surface": "#eff1f3", "on-surface": "#191c1e", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#004395", "on-secondary-fixed-variant": "#003ea8", "surface-bright": "#f7f9fb", "outline": "#75777e", "outline-variant": "#c5c6ce", "secondary": "#0051d5", "surface-dim": "#d8dadc", "background": "#f7f9fb", "on-secondary-container": "#fefcff"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"space-12": "48px", "grid-columns": "12", "gutter-mobile": "16px", "space-16": "64px", "space-2": "8px", "space-24": "96px", "margin-mobile": "20px", "gutter-desktop": "32px", "space-4": "16px", "margin-tablet": "40px", "margin-desktop": "80px", "space-6": "24px", "gutter-tablet": "24px", "space-8": "32px"}, "fontFamily": {"headline-display-mobile": ["Manrope"], "headline-sm": ["Manrope"], "body-md": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Manrope"], "headline-lg": ["Manrope"], "headline-display": ["Manrope"], "headline-lg-mobile": ["Manrope"], "label-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"]}, "fontSize": {"headline-display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}], "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}], "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}], "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]}}}};</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-space-8 flex items-center justify-between"><div class="flex items-center gap-space-2"><span class="text-headline-sm text-primary font-bold tracking-tight">IFDigital</span></div><nav class="hidden lg:flex items-center gap-space-6" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="beranda" href="#">Beranda</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="layanan" href="#">Layanan</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#">Portfolio</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="harga" href="#">Harga</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="proses" href="#">Proses</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="tentang-kami" href="#">Tentang Kami</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a></nav><div class="flex items-center gap-space-4"><div class="relative flex items-center gap-space-2 px-space-2 py-1 bg-surface-container-high rounded-lg cursor-pointer"><span class="text-label-sm text-on-surface">🇮🇩 ID</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></div><a class="px-space-4 py-2 bg-secondary text-on-secondary rounded-lg text-label-md font-medium hover:bg-secondary/90 transition-colors" data-path="konsultasi-gratis" href="#">Konsultasi Gratis</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full bg-surface text-on-surface">
+<!-- Hero / Overview Section -->
+<section class="w-full max-w-[1280px] mx-auto px-space-8 py-space-16 grid grid-cols-1 lg:grid-cols-12 gap-space-8 items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-6">
+<div class="flex items-center gap-space-2">
+<span class="px-space-3 py-1 bg-secondary-container text-on-secondary-container rounded-lg text-label-sm uppercase tracking-wider font-bold">Studi Kasus</span>
+<span class="text-body-sm text-on-surface-variant">/ FinTech & Perbankan</span>
+</div>
+<h1 class="text-headline-display font-headline-display tracking-tight text-primary">
+        Aura Banking Dashboard: Redefining Enterprise Wealth Management
+      </h1>
+<p class="text-body-lg text-on-surface-variant max-w-2xl">
+        Bagaimana kami mentransformasi platform perbankan warisan (legacy) menjadi aplikasi web berkecepatan tinggi dengan arsitektur modular dan pengalaman pengguna kelas dunia.
+      </p>
+<!-- Metadata Bar -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-4 mt-space-4 p-space-6 bg-surface-container rounded-xl">
+<div>
+<span class="text-label-sm text-on-surface-variant block uppercase tracking-wider">Klien</span>
+<span class="text-headline-sm text-primary mt-1 block">Aura Financial</span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block uppercase tracking-wider">Industri</span>
+<span class="text-headline-sm text-primary mt-1 block">Digital Banking</span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block uppercase tracking-wider">Timeline</span>
+<span class="text-headline-sm text-primary mt-1 block">4 Bulan</span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block uppercase tracking-wider">Peran</span>
+<span class="text-headline-sm text-primary mt-1 block">UI/UX & Engineering</span>
+</div>
+</div>
+</div>
+<!-- Metric Card Highlight -->
+<div class="lg:col-span-4 bg-primary text-on-primary p-space-8 rounded-xl flex flex-col justify-between gap-space-8 shadow-xl relative overflow-hidden">
+<div class="absolute -right-12 -bottom-12 w-48 h-48 bg-secondary/20 rounded-full blur-2xl"></div>
+<div class="flex flex-col gap-space-2 relative z-10">
+<span class="text-label-sm text-on-primary-container uppercase tracking-wider">Dampak Utama</span>
+<span class="text-[64px] leading-[72px] font-headline-display font-bold text-on-secondary-container">+320%</span>
+<span class="text-body-md text-on-primary-container">Peningkatan kecepatan transaksi harian & adopsi pengguna aktif dalam 3 bulan pertama.</span>
+</div>
+<div class="pt-space-4 border-t border-outline/20 flex items-center justify-between relative z-10">
+<span class="text-body-sm text-on-primary">Klien Puas</span>
+<div class="flex items-center gap-1 text-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</section>
+<!-- High-fidelity browser mockup preview -->
+<section class="w-full max-w-[1280px] mx-auto px-space-8 pb-space-16">
+<div class="w-full bg-surface-container rounded-xl overflow-hidden shadow-2xl">
+<div class="px-space-4 py-3 bg-surface-container-high flex items-center gap-2">
+<div class="flex gap-1.5">
+<div class="w-3 h-3 rounded-full bg-error/60"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-fixed-dim/60"></div>
+<div class="w-3 h-3 rounded-full bg-secondary/60"></div>
+</div>
+<div class="mx-auto px-12 py-1 bg-surface rounded text-label-sm text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[14px]">lock</span>
+<span>https://app.aurafinancial.id/dashboard</span>
+</div>
+</div>
+<div class="w-full h-[520px] bg-cover bg-center relative" data-alt="A sophisticated modern fintech banking dashboard interface showing real-time portfolio analytics, dark navy background with electric blue glowing charts, clean typography, financial data tables, and high-end executive financial metrics." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2K0fWNGQ5NyURHcSfv_n-i0zAxj2i0e1QfZJrnrxgoRe-sI97khvCZYBjolVsiwJASYFDRHPTR4sBkzq3C6zYt-mxaeqA3n5EIelu2hwbLxov7qOPy-pWFNDjfGyqje96mT1OSWODH_81C4msLDEgsvEOTwQbUoXdUP3rxHD8YWEhTj2Fq63tnuLeyW5y7WHYW-OWmoSseBkKi1O2quXzzPhBXpAHbXzE2TGqpX3uPc6CAGBnK_nE')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent flex items-end p-space-8">
+<div class="text-on-primary">
+<span class="text-label-sm uppercase tracking-wider text-secondary-fixed">Preview Antarmuka</span>
+<h3 class="text-headline-md font-headline-md">Aura Wealth Management Portal v2.4</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Challenge & Objective -->
+<section class="w-full bg-surface-container-low py-space-16">
+<div class="max-w-[1280px] mx-auto px-space-8 grid grid-cols-1 lg:grid-cols-12 gap-space-12">
+<div class="lg:col-span-5 flex flex-col justify-center gap-space-4">
+<span class="text-label-sm font-bold text-secondary uppercase tracking-wider">Tantangan & Tujuan</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Mengatasi Latensi Sistem Lama & Kompleksitas Data</h2>
+<p class="text-body-md text-on-surface-variant">
+          Aura Financial menghadapi kendala besar dalam mempertahankan nasabah institusional karena lambatnya pemrosesan data portofolio dan antarmuka yang kurang intuitif.
+        </p>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-space-6">
+<div class="bg-surface p-space-8 rounded-xl shadow-sm flex flex-col gap-space-4">
+<div class="w-12 h-12 rounded-lg bg-error-container text-on-error-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">timer_off</span>
+</div>
+<h3 class="text-headline-sm text-primary">Latency Isu & Performa</h3>
+<p class="text-body-sm text-on-surface-variant">Waktu muat halaman mencapai 8 detik untuk laporan portofolio komprehensif, menyebabkan tingginya tingkat frustrasi pengguna korporat.</p>
+</div>
+<div class="bg-surface p-space-8 rounded-xl shadow-sm flex flex-col gap-space-4">
+<div class="w-12 h-12 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">architecture</span>
+</div>
+<h3 class="text-headline-sm text-primary">Arsitektur Monolitik</h3>
+<p class="text-body-sm text-on-surface-variant">Sistem lama menyulitkan tim internal untuk merilis pembaruan fitur baru tanpa mengganggu stabilitas transaksi inti.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Approach -->
+<section class="w-full max-w-[1280px] mx-auto px-space-8 py-space-16">
+<div class="flex flex-col items-center text-center gap-space-4 mb-space-12">
+<span class="text-label-sm font-bold text-secondary uppercase tracking-wider">Metodologi Kami</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Pendekatan Desain & Pengembangan</h2>
+<p class="text-body-md text-on-surface-variant max-w-xl">Kami menerapkan framework Agile berpusat pada pengguna, menggabungkan riset mendalam dengan iterasi cepat.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-8">
+<div class="bg-surface-container-low p-space-8 rounded-xl flex flex-col gap-space-6 relative">
+<span class="text-[48px] font-headline-display font-bold text-outline-variant/40 absolute top-4 right-6">01</span>
+<div class="w-12 h-12 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">psychology</span>
+</div>
+<h3 class="text-headline-sm text-primary">Discovery & User Research</h3>
+<p class="text-body-sm text-on-surface-variant">Melakukan wawancara mendalam dengan 40+ wealth manager untuk memetakan alur kerja harian dan titik gesekan utama.</p>
+</div>
+<div class="bg-surface-container-low p-space-8 rounded-xl flex flex-col gap-space-6 relative">
+<span class="text-[48px] font-headline-display font-bold text-outline-variant/40 absolute top-4 right-6">02</span>
+<div class="w-12 h-12 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">design_services</span>
+</div>
+<h3 class="text-headline-sm text-primary">Design System & Prototyping</h3>
+<p class="text-body-sm text-on-surface-variant">Membangun komponen UI kustom dengan standar aksesibilitas tinggi dan prototipe interaktif untuk pengujian kegunaan.</p>
+</div>
+<div class="bg-surface-container-low p-space-8 rounded-xl flex flex-col gap-space-6 relative">
+<span class="text-[48px] font-headline-display font-bold text-outline-variant/40 absolute top-4 right-6">03</span>
+<div class="w-12 h-12 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">code</span>
+</div>
+<h3 class="text-headline-sm text-primary">Modular Engineering</h3>
+<p class="text-body-sm text-on-surface-variant">Mengembangkan frontend berbasis komponen modern dengan optimasi SSR dan keamanan enkripsi end-to-end.</p>
+</div>
+</div>
+</section>
+<!-- Key Features & Architecture -->
+<section class="w-full bg-primary text-on-primary py-space-16">
+<div class="max-w-[1280px] mx-auto px-space-8 grid grid-cols-1 lg:grid-cols-12 gap-space-12 items-center">
+<div class="lg:col-span-6 flex flex-col gap-space-6">
+<span class="text-label-sm font-bold text-secondary-fixed uppercase tracking-wider">Fitur Utama & Arsitektur</span>
+<h2 class="text-headline-lg font-headline-lg text-on-primary">Dirancang untuk Skala Enterprise & Keamanan Ketat</h2>
+<p class="text-body-md text-on-primary-container">
+          Setiap modul dirancang untuk merespons dalam milidetik, memberikan visibilitas real-time tanpa mengorbankan standar regulasi perbankan.
+        </p>
+<div class="flex flex-col gap-space-4 mt-space-2">
+<div class="flex items-start gap-space-4">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center mt-1 flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div>
+<h4 class="text-headline-sm text-on-primary">Real-time Portfolio Analytics</h4>
+<p class="text-body-sm text-on-primary-container">Visualisasi data aset instan dengan grafik interaktif berbasis WebGL.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-4">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center mt-1 flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div>
+<h4 class="text-headline-sm text-on-primary">Role-Based Access Control (RBAC)</h4>
+<p class="text-body-sm text-on-primary-container">Pengaturan otorisasi berlapis sesuai tingkat keamanan korporat.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-4">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center mt-1 flex-shrink-0">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div>
+<h4 class="text-headline-sm text-on-primary">Automated Compliance Reporting</h4>
+<p class="text-body-sm text-on-primary-container">Ekspor laporan audit instan dalam format PDF & Excel bersertifikasi.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 bg-surface-container-lowest p-space-8 rounded-xl text-on-surface shadow-2xl flex flex-col gap-space-6">
+<div class="flex items-center justify-between">
+<span class="text-label-sm uppercase font-bold text-secondary">Tech Stack Pilihan</span>
+<span class="text-body-sm text-on-surface-variant">High Performance Setup</span>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-space-4">
+<div class="p-space-4 bg-surface rounded-lg flex flex-col items-center text-center gap-space-2">
+<span class="material-symbols-outlined text-[32px] text-secondary">code</span>
+<span class="text-label-md font-bold text-primary">React / Next.js</span>
+</div>
+<div class="p-space-4 bg-surface rounded-lg flex flex-col items-center text-center gap-space-2">
+<span class="material-symbols-outlined text-[32px] text-secondary">bolt</span>
+<span class="text-label-md font-bold text-primary">TypeScript</span>
+</div>
+<div class="p-space-4 bg-surface rounded-lg flex flex-col items-center text-center gap-space-2">
+<span class="material-symbols-outlined text-[32px] text-secondary">storage</span>
+<span class="text-label-md font-bold text-primary">PostgreSQL</span>
+</div>
+<div class="p-space-4 bg-surface rounded-lg flex flex-col items-center text-center gap-space-2">
+<span class="material-symbols-outlined text-[32px] text-secondary">cloud</span>
+<span class="text-label-md font-bold text-primary">AWS Cloud</span>
+</div>
+<div class="p-space-4 bg-surface rounded-lg flex flex-col items-center text-center gap-space-2">
+<span class="material-symbols-outlined text-[32px] text-secondary">security</span>
+<span class="text-label-md font-bold text-primary">OAuth 2.0</span>
+</div>
+<div class="p-space-4 bg-surface rounded-lg flex flex-col items-center text-center gap-space-2">
+<span class="material-symbols-outlined text-[32px] text-secondary">speed</span>
+<span class="text-label-md font-bold text-primary">Redis Cache</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Results & Impact -->
+<section class="w-full max-w-[1280px] mx-auto px-space-8 py-space-16">
+<div class="flex flex-col items-center text-center gap-space-4 mb-space-12">
+<span class="text-label-sm font-bold text-secondary uppercase tracking-wider">Hasil & Dampak Bisnis</span>
+<h2 class="text-headline-lg font-headline-lg text-primary">Metrik Nyata yang Terbukti</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-8">
+<div class="bg-surface-container-low p-space-8 rounded-xl flex flex-col gap-space-4 text-center">
+<span class="text-[56px] font-headline-display font-bold text-secondary">0.4s</span>
+<h3 class="text-headline-sm text-primary">Waktu Muat Halaman</h3>
+<p class="text-body-sm text-on-surface-variant">Turun drastis dari sebelumnya 8.2 detik, memberikan pengalaman pengguna yang sangat responsif.</p>
+</div>
+<div class="bg-surface-container-low p-space-8 rounded-xl flex flex-col gap-space-4 text-center">
+<span class="text-[56px] font-headline-display font-bold text-secondary">99.9%</span>
+<h3 class="text-headline-sm text-primary">Uptime Sistem</h3>
+<p class="text-body-sm text-on-surface-variant">Stabilitas tinggi berkat arsitektur cloud-native yang didistribusikan di berbagai region.</p>
+</div>
+<div class="bg-surface-container-low p-space-8 rounded-xl flex flex-col gap-space-4 text-center">
+<span class="text-[56px] font-headline-display font-bold text-secondary">4.9/5</span>
+<h3 class="text-headline-sm text-primary">Kepuasan Pengguna</h3>
+<p class="text-body-sm text-on-surface-variant">Skor CSAT tertinggi dari survei internal wealth manager setelah peluncuran platform.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="w-full bg-surface-container py-space-16">
+<div class="max-w-[1280px] mx-auto px-space-8">
+<div class="bg-primary text-on-primary p-space-16 rounded-xl flex flex-col items-center text-center gap-space-6 relative overflow-hidden shadow-2xl">
+<div class="absolute -right-24 -top-24 w-96 h-96 bg-secondary/30 rounded-full blur-3xl"></div>
+<div class="absolute -left-24 -bottom-24 w-96 h-96 bg-tertiary-container/30 rounded-full blur-3xl"></div>
+<span class="text-label-sm uppercase tracking-wider text-secondary-fixed font-bold relative z-10">Mulai Transformasi Digital Anda</span>
+<h2 class="text-headline-display font-headline-display max-w-2xl relative z-10">Punya Project Serupa? Diskusikan dengan Kami</h2>
+<p class="text-body-lg text-on-primary-container max-w-xl relative z-10">
+          Jadwalkan sesi konsultasi gratis bersama tim arsitek dan desainer senior IFDigital untuk mewujudkan solusi digital terbaik Anda.
+        </p>
+<div class="flex flex-wrap items-center justify-center gap-space-4 mt-space-4 relative z-10">
+<a class="px-space-8 py-4 bg-secondary text-on-secondary rounded-lg text-label-md font-bold hover:bg-secondary/90 transition-colors shadow-lg" href="#">Konsultasi Gratis Sekarang</a>
+<a class="px-space-8 py-4 bg-surface-container-high text-on-surface rounded-lg text-label-md font-bold hover:bg-surface-container-highest transition-colors" href="#">Lihat Portfolio Lainnya</a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low py-space-12"><div class="max-w-[1280px] mx-auto px-space-8 grid grid-cols-1 md:grid-cols-4 gap-space-8"><div class="flex flex-col gap-space-4"><span class="text-headline-sm text-primary font-bold">IFDigital</span><p class="text-body-sm text-on-surface-variant">Digital agency specializing in high-end web development, design, and strategic digital solutions.</p></div><div class="flex flex-col gap-space-2"><span class="text-label-md font-bold text-on-surface mb-space-2">Layanan</span><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Web Development</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">UI/UX Design</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Digital Marketing</a></div><div class="flex flex-col gap-space-2"><span class="text-label-md font-bold text-on-surface mb-space-2">Tautan Cepat</span><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Portfolio</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Harga</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Tentang Kami</a></div><div class="flex flex-col gap-space-2"><span class="text-label-md font-bold text-on-surface mb-space-2">Kontak</span><span class="text-body-sm text-on-surface-variant">hello@ifdigital.id</span><span class="text-body-sm text-on-surface-variant">+62 21 5558 9999</span></div></div><div class="max-w-[1280px] mx-auto px-space-8 mt-space-8 pt-space-6 border-t border-outline-variant/30 text-center text-on-surface-variant text-label-sm">© 2024 IFDigital. All rights reserved.</div></footer></body></html>

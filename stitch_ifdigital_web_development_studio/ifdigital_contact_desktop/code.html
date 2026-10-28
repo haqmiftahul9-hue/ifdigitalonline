@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"on-surface-variant": "#44474d", "surface": "#f7f9fb", "on-primary-container": "#7684a0", "on-primary": "#ffffff", "tertiary-container": "#001a42", "tertiary-fixed": "#d8e2ff", "surface-container-highest": "#e0e3e5", "secondary-fixed": "#dbe1ff", "secondary-container": "#316bf3", "surface-variant": "#e0e3e5", "on-secondary-fixed": "#00174b", "on-primary-fixed": "#0d1c33", "error": "#ba1a1a", "on-secondary": "#ffffff", "surface-container": "#eceef0", "surface-container-lowest": "#ffffff", "inverse-surface": "#2d3133", "primary-fixed-dim": "#b9c7e5", "inverse-primary": "#b9c7e5", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#394760", "secondary-fixed-dim": "#b4c5ff", "on-background": "#191c1e", "tertiary": "#000000", "error-container": "#ffdad6", "primary": "#000000", "primary-container": "#0d1c33", "on-tertiary-fixed": "#001a42", "on-tertiary-container": "#3980f4", "surface-container-low": "#f2f4f6", "on-error": "#ffffff", "tertiary-fixed-dim": "#adc6ff", "surface-tint": "#515f79", "surface-container-high": "#e6e8ea", "primary-fixed": "#d6e3ff", "inverse-on-surface": "#eff1f3", "on-surface": "#191c1e", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#004395", "on-secondary-fixed-variant": "#003ea8", "surface-bright": "#f7f9fb", "outline": "#75777e", "outline-variant": "#c5c6ce", "secondary": "#0051d5", "surface-dim": "#d8dadc", "background": "#f7f9fb", "on-secondary-container": "#fefcff"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"space-12": "48px", "grid-columns": "12", "gutter-mobile": "16px", "space-16": "64px", "space-2": "8px", "space-24": "96px", "margin-mobile": "20px", "gutter-desktop": "32px", "space-4": "16px", "margin-tablet": "40px", "margin-desktop": "80px", "space-6": "24px", "gutter-tablet": "24px", "space-8": "32px"}, "fontFamily": {"headline-display-mobile": ["Manrope"], "headline-sm": ["Manrope"], "body-md": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Manrope"], "headline-lg": ["Manrope"], "headline-display": ["Manrope"], "headline-lg-mobile": ["Manrope"], "label-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"]}, "fontSize": {"headline-display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}], "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}], "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}], "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]}}}};</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-space-8 flex items-center justify-between"><div class="flex items-center gap-space-2"><span class="text-headline-sm text-primary font-bold tracking-tight">IFDigital</span></div><nav class="hidden lg:flex items-center gap-space-6" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="beranda" href="#">Beranda</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="layanan" href="#">Layanan</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#">Portfolio</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="harga" href="#">Harga</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="proses" href="#">Proses</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="tentang-kami" href="#">Tentang Kami</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a></nav><div class="flex items-center gap-space-4"><div class="relative flex items-center gap-space-2 px-space-2 py-1 bg-surface-container-high rounded-lg cursor-pointer"><span class="text-label-sm text-on-surface">🇮🇩 ID</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></div><a class="px-space-4 py-2 bg-secondary text-on-secondary rounded-lg text-label-md font-medium hover:bg-secondary/90 transition-colors" data-path="konsultasi-gratis" href="#">Konsultasi Gratis</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
+<!-- Hero / Header Intro Section -->
+<section class="w-full bg-surface-container-low pt-space-16 pb-space-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-secondary/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-space-8">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-space-2 px-3 py-1 bg-secondary/10 text-secondary rounded-full text-label-sm font-medium mb-space-4">
+<span class="material-symbols-outlined text-[16px]">chat_bubble</span>
+          Hubungi Kami
+        </div>
+<h1 class="text-headline-display text-on-surface font-headline-display tracking-tight mb-space-4">
+          Punya ide website? Mari kita diskusikan.
+        </h1>
+<p class="text-body-lg text-on-surface-variant font-body-lg">
+          Hubungi tim ahli kami atau jadwalkan sesi konsultasi gratis untuk membahas kebutuhan digital Anda.
+        </p>
+</div>
+</div>
+</section>
+<!-- Main Content Grid Section -->
+<section class="w-full py-space-16 bg-surface">
+<div class="max-w-[1280px] mx-auto px-space-8">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-12 items-start">
+<!-- Left Column: Contact Information & Details (5 Cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-8">
+<div class="bg-surface-container-lowest p-space-8 rounded-xl shadow-sm flex flex-col gap-space-6">
+<h3 class="text-headline-md text-on-surface font-headline-md">Informasi Kontak</h3>
+<p class="text-body-md text-on-surface-variant">
+              Pilih cara terhubung yang paling nyaman bagi Anda. Tim kami siap merespon dalam waktu maksimal 2 jam kerja.
+            </p>
+<div class="flex flex-col gap-space-6 mt-space-2">
+<!-- WhatsApp -->
+<div class="flex items-start gap-space-4">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">phone_iphone</span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block mb-1">WhatsApp Langsung</span>
+<a class="text-body-md font-bold text-on-surface hover:text-secondary transition-colors" href="https://wa.me/622155589999">+62 21 5558 9999</a>
+</div>
+</div>
+<!-- Email -->
+<div class="flex items-start gap-space-4">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">mail</span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block mb-1">Email Resmi</span>
+<a class="text-body-md font-bold text-on-surface hover:text-secondary transition-colors" href="mailto:hello@ifdigital.id">hello@ifdigital.id</a>
+</div>
+</div>
+<!-- Office -->
+<div class="flex items-start gap-space-4">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">location_on</span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block mb-1">Kantor Utama</span>
+<p class="text-body-md font-bold text-on-surface">Sudirman Central Business District (SCBD)<br/>Jakarta Selatan, Indonesia</p>
+</div>
+</div>
+<!-- Operating Hours -->
+<div class="flex items-start gap-space-4 pt-space-4 border-t border-outline-variant/20">
+<div class="w-12 h-12 rounded-xl bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[24px]">schedule</span>
+</div>
+<div>
+<span class="text-label-sm text-on-surface-variant block mb-1">Jam Operasional</span>
+<p class="text-body-md text-on-surface font-medium">Senin - Jumat, 09:00 - 18:00 WIB</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Mini Map / Location Preview Card -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden shadow-sm p-4">
+<div class="w-full h-48 rounded-lg bg-cover bg-center" data-alt="A sophisticated corporate office building exterior in the Sudirman Central Business District of Jakarta Selatan during daylight, showcasing modern architecture with glass facades and clean urban landscaping reflecting the high-end digital agency aesthetic." data-location="Sudirman Central Business District, Jakarta Selatan" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA02Earn0bggqeYlbZLD_oRtrkftIsQKcZnfnY0mMwALtnV5pQ9Hqmbp1jUdBkbOo8jPrPxNQQ0IvcBrWCwbrgnVwKON3qYQ7XXkEra5_VOQPFMcLlYnirke3Eekl_KG3OPU14ej0_gsAZxzeM5FeqWTRGCD93glNR6L4sHIzEOrl_sJcTvCcdKp4JCVJ9z_PRBZrT4mX2L4dDhDaR40PLy_OfNsMKdrxXAypH6Trk1sSBGnDnRQ7iu')"></div>
+</div>
+</div>
+<!-- Right Column: Fast Contact Form & FAQ (7 Cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-8">
+<!-- Form Hubungi Kami Cepat -->
+<div class="bg-surface-container-lowest p-space-8 rounded-xl shadow-sm">
+<h3 class="text-headline-md text-on-surface font-headline-md mb-2">Kirim Pesan Cepat</h3>
+<p class="text-body-sm text-on-surface-variant mb-space-6">Isi formulir di bawah ini dan konsultan kami akan segera menghubungi Anda.</p>
+<form class="flex flex-col gap-space-6" id="contact-form" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah dikirim.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-6">
+<div class="flex flex-col gap-space-2">
+<label class="text-label-md font-medium text-on-surface">Nama Lengkap</label>
+<input class="px-space-4 py-3 bg-surface rounded-lg text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" placeholder="cth. Budi Santoso" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-space-2">
+<label class="text-label-md font-medium text-on-surface">Nomor WhatsApp</label>
+<input class="px-space-4 py-3 bg-surface rounded-lg text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" placeholder="cth. 081234567890" required="" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-space-2">
+<label class="text-label-md font-medium text-on-surface">Alamat Email</label>
+<input class="px-space-4 py-3 bg-surface rounded-lg text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" placeholder="cth. budi@perusahaan.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-space-2">
+<label class="text-label-md font-medium text-on-surface">Pesan / Pertanyaan</label>
+<textarea class="px-space-4 py-3 bg-surface rounded-lg text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary transition-all" placeholder="Ceritakan sedikit tentang proyek atau kebutuhan digital Anda..." required="" rows="4"></textarea>
+</div>
+<button class="w-full py-4 bg-secondary text-on-secondary rounded-lg text-label-md font-medium hover:bg-secondary/90 transition-colors flex items-center justify-center gap-space-2 shadow-sm" type="submit">
+<span>Kirim Pesan Sekarang</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</form>
+</div>
+<!-- FAQ Singkat Seputar Awal Kerja Sama -->
+<div class="bg-surface-container-lowest p-space-8 rounded-xl shadow-sm">
+<h3 class="text-headline-md text-on-surface font-headline-md mb-space-6">FAQ Seputar Awal Kerja Sama</h3>
+<div class="flex flex-col gap-space-6">
+<div class="pb-space-6 border-b border-outline-variant/20">
+<h4 class="text-body-lg font-bold text-on-surface mb-2">Bagaimana proses awal setelah saya mengirimkan pesan?</h4>
+<p class="text-body-md text-on-surface-variant">Tim kami akan meninjau kebutuhan Anda dan menghubungi via WhatsApp atau email dalam kurun waktu maksimal 2 jam kerja untuk menjadwalkan sesi diskusi lanjutan.</p>
+</div>
+<div class="pb-space-6 border-b border-outline-variant/20">
+<h4 class="text-body-lg font-bold text-on-surface mb-2">Apakah sesi konsultasi pertama benar-benar gratis?</h4>
+<p class="text-body-md text-on-surface-variant">Ya, sesi konsultasi awal (Discovery Call) berdurasi 30-45 menit sepenuhnya gratis untuk menganalisis kebutuhan teknis dan arah strategi digital Anda.</p>
+</div>
+<div>
+<h4 class="text-body-lg font-bold text-on-surface mb-2">Apa saja yang perlu saya persiapkan sebelum meeting?</h4>
+<p class="text-body-md text-on-surface-variant">Cukup siapkan gambaran umum mengenai tujuan bisnis, referensi desain atau website yang disukai, serta estimasi lini masa atau target peluncuran.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low py-space-12"><div class="max-w-[1280px] mx-auto px-space-8 grid grid-cols-1 md:grid-cols-4 gap-space-8"><div class="flex flex-col gap-space-4"><span class="text-headline-sm text-primary font-bold">IFDigital</span><p class="text-body-sm text-on-surface-variant">Digital agency specializing in high-end web development, design, and strategic digital solutions.</p></div><div class="flex flex-col gap-space-2"><span class="text-label-md font-bold text-on-surface mb-space-2">Layanan</span><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Web Development</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">UI/UX Design</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Digital Marketing</a></div><div class="flex flex-col gap-space-2"><span class="text-label-md font-bold text-on-surface mb-space-2">Tautan Cepat</span><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Portfolio</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Harga</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Tentang Kami</a></div><div class="flex flex-col gap-space-2"><span class="text-label-md font-bold text-on-surface mb-space-2">Kontak</span><span class="text-body-sm text-on-surface-variant">hello@ifdigital.id</span><span class="text-body-sm text-on-surface-variant">+62 21 5558 9999</span></div></div><div class="max-w-[1280px] mx-auto px-space-8 mt-space-8 pt-space-6 border-t border-outline-variant/30 text-center text-on-surface-variant text-label-sm">© 2024 IFDigital. All rights reserved.</div></footer></body></html>

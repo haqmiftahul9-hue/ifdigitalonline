@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode": "class", "theme": {"extend": {"colors": {"on-surface-variant": "#44474d", "surface": "#f7f9fb", "on-primary-container": "#7684a0", "on-primary": "#ffffff", "tertiary-container": "#001a42", "tertiary-fixed": "#d8e2ff", "surface-container-highest": "#e0e3e5", "secondary-fixed": "#dbe1ff", "secondary-container": "#316bf3", "surface-variant": "#e0e3e5", "on-secondary-fixed": "#00174b", "on-primary-fixed": "#0d1c33", "error": "#ba1a1a", "on-secondary": "#ffffff", "surface-container": "#eceef0", "surface-container-lowest": "#ffffff", "inverse-surface": "#2d3133", "primary-fixed-dim": "#b9c7e5", "inverse-primary": "#b9c7e5", "on-tertiary": "#ffffff", "on-primary-fixed-variant": "#394760", "secondary-fixed-dim": "#b4c5ff", "on-background": "#191c1e", "tertiary": "#000000", "error-container": "#ffdad6", "primary": "#000000", "primary-container": "#0d1c33", "on-tertiary-fixed": "#001a42", "on-tertiary-container": "#3980f4", "surface-container-low": "#f2f4f6", "on-error": "#ffffff", "tertiary-fixed-dim": "#adc6ff", "surface-tint": "#515f79", "surface-container-high": "#e6e8ea", "primary-fixed": "#d6e3ff", "inverse-on-surface": "#eff1f3", "on-surface": "#191c1e", "on-error-container": "#93000a", "on-tertiary-fixed-variant": "#004395", "on-secondary-fixed-variant": "#003ea8", "surface-bright": "#f7f9fb", "outline": "#75777e", "outline-variant": "#c5c6ce", "secondary": "#0051d5", "surface-dim": "#d8dadc", "background": "#f7f9fb", "on-secondary-container": "#fefcff"}, "borderRadius": {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"}, "spacing": {"space-12": "48px", "grid-columns": "12", "gutter-mobile": "16px", "space-16": "64px", "space-2": "8px", "space-24": "96px", "margin-mobile": "20px", "gutter-desktop": "32px", "space-4": "16px", "margin-tablet": "40px", "margin-desktop": "80px", "space-6": "24px", "gutter-tablet": "24px", "space-8": "32px"}, "fontFamily": {"headline-display-mobile": ["Manrope"], "headline-sm": ["Manrope"], "body-md": ["Inter"], "label-sm": ["Inter"], "headline-md": ["Manrope"], "headline-lg": ["Manrope"], "headline-display": ["Manrope"], "headline-lg-mobile": ["Manrope"], "label-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"]}, "fontSize": {"headline-display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}], "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}], "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}], "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}], "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "headline-display": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}], "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}], "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}], "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}], "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]}}}};</script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@100..900&display=swap" rel="stylesheet"/></head><body class="bg-surface font-body-md text-on-surface"><header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-space-8 flex items-center justify-between"><div class="flex items-center gap-space-2"><span class="text-headline-sm text-primary font-bold tracking-tight">IFDigital</span></div><nav class="hidden lg:flex items-center gap-space-6" data-active-classes="text-primary font-bold"><a aria-current="page" class="transition-colors text-primary font-bold" data-path="beranda" href="#">Beranda</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="layanan" href="#">Layanan</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="portfolio" href="#">Portfolio</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="harga" href="#">Harga</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="proses" href="#">Proses</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="tentang-kami" href="#">Tentang Kami</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface transition-colors" data-path="faq" href="#">FAQ</a></nav><div class="flex items-center gap-space-4"><div class="relative flex items-center gap-space-2 px-space-2 py-1 bg-surface-container-high rounded-lg cursor-pointer"><span class="text-label-sm text-on-surface">🇮🇩 ID</span><span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_drop_down</span></div><a class="px-space-4 py-2 bg-secondary text-on-secondary rounded-lg text-label-md font-medium hover:bg-secondary/90 transition-colors" data-path="konsultasi-gratis" href="#">Konsultasi Gratis</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full bg-surface text-on-surface">
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-space-16 pb-space-24 bg-surface-container-lowest">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5 pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-space-8 grid grid-cols-1 lg:grid-cols-12 gap-space-12 items-center relative z-10">
+<div class="lg:col-span-7 flex flex-col gap-space-6">
+<div class="inline-flex items-center gap-space-2 px-space-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded-full w-fit text-label-sm font-semibold tracking-wide">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span data-i18n="hero-badge">Digital Studio & Web Engineering</span>
+</div>
+<h1 class="font-headline-display text-headline-display text-primary tracking-tight" data-i18n="hero-title">
+          Website Profesional untuk Membawa Bisnis Anda Lebih Jauh
+        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl" data-i18n="hero-desc">
+          Kami merancang dan mengembangkan web berstandar tinggi dengan performa luar biasa, desain elegan, dan struktur terukur untuk mendongkrak konversi bisnis Anda.
+        </p>
+<div class="flex flex-wrap items-center gap-space-4 pt-space-2">
+<a class="px-space-6 py-3.5 bg-secondary text-on-secondary rounded-lg font-medium hover:bg-secondary/90 transition-all shadow-md flex items-center gap-space-2" href="#">
+<span data-i18n="cta-consult">Konsultasi Gratis</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="px-space-6 py-3.5 bg-surface-container-high text-primary rounded-lg font-medium hover:bg-surface-container-highest transition-all flex items-center gap-space-2" href="#">
+<span data-i18n="cta-portfolio">Lihat Portfolio</span>
+</a>
+</div>
+<div class="grid grid-cols-3 gap-space-6 pt-space-8 border-t border-outline-variant/30 mt-space-4">
+<div>
+<span class="font-headline-md text-primary font-bold block">150+</span>
+<span class="font-body-sm text-on-surface-variant" data-i18n="stat-1">Project Selesai</span>
+</div>
+<div>
+<span class="font-headline-md text-primary font-bold block">99.8%</span>
+<span class="font-body-sm text-on-surface-variant" data-i18n="stat-2">Klien Puas</span>
+</div>
+<div>
+<span class="font-headline-md text-primary font-bold block">5+ Tahun</span>
+<span class="font-body-sm text-on-surface-variant" data-i18n="stat-3">Pengalaman Industri</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="absolute -inset-2 bg-gradient-to-r from-secondary to-primary-container rounded-xl blur-xl opacity-20"></div>
+<div class="relative bg-surface rounded-xl shadow-2xl p-space-4 border border-outline-variant/20">
+<div class="flex items-center justify-between pb-space-3 border-b border-outline-variant/20 mb-space-4">
+<div class="flex items-center gap-space-2">
+<div class="w-3 h-3 rounded-full bg-error/80"></div>
+<div class="w-3 h-3 rounded-full bg-amber-400"></div>
+<div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+</div>
+<div class="px-space-4 py-1 bg-surface-container-high rounded text-label-sm text-on-surface-variant">ifdigital.id/preview</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">lock</span>
+</div>
+<div class="space-y-space-4">
+<div class="h-48 rounded-lg bg-cover bg-center overflow-hidden relative shadow-inner" data-alt="A high-end SaaS dashboard preview with sleek analytics graphs, dark navy accents, electric blue buttons, and micro-interactions on clean white surface cards." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAqIWOhVsery6gnNuoDCBrtvjQCz7e3q2VlofPlpU9zf1bCFMFD4cu3hmsF5rqgeFeUgWaK8jwQ-XYi1-iD0Gj1v6yBBqdNdOrZXloboxt8WlZpcF1IKXIt9lQ0i7iS6hQPyK5oL5C2K33Mb3R-wi7hA2r_0-qF0t6MJRLSckmetUYqwuEtkylf1_hKfLvJzdi5LVD8MDG17rcXAUpmkKCVK06FLBx34c20_nM7ZbXmn1ejJZtxX5ck')">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent flex items-end p-space-4">
+<span class="text-on-primary font-bold text-headline-sm" data-i18n="mockup-title">Enterprise Analytics V2</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-3">
+<div class="p-space-3 bg-surface-container-low rounded-lg">
+<span class="text-label-sm text-on-surface-variant block" data-i18n="metric-revenue">Monthly Revenue</span>
+<span class="text-headline-sm text-primary font-bold">Rp 1.4B</span>
+</div>
+<div class="p-space-3 bg-surface-container-low rounded-lg">
+<span class="text-label-sm text-on-surface-variant block" data-i18n="metric-conversion">Conversion Rate</span>
+<span class="text-headline-sm text-secondary font-bold">+28.4%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Value Proposition Section -->
+<section class="py-space-24 bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-space-8">
+<div class="text-center max-w-2xl mx-auto mb-space-16">
+<span class="text-label-sm text-secondary uppercase tracking-widest font-semibold block mb-space-2" data-i18n="val-tag">Mengapa IFDigital?</span>
+<h2 class="font-headline-lg text-headline-lg text-primary" data-i18n="val-title">Standar Tertinggi untuk Pertumbuhan Bisnis Digital</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-6">
+<div class="p-space-8 bg-surface rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-space-6">
+<span class="material-symbols-outlined text-[24px]">tune</span>
+</div>
+<h3 class="font-headline-sm text-primary mb-space-2" data-i18n="val-1-title">Custom Sesuai Kebutuhan</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="val-1-desc">Solusi dirancang dari nol secara spesifik menyesuaikan model bisnis dan identitas brand Anda tanpa template pasaran.</p>
+</div>
+<div class="p-space-8 bg-surface rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-space-6">
+<span class="material-symbols-outlined text-[24px]">devices</span>
+</div>
+<h3 class="font-headline-sm text-primary mb-space-2" data-i18n="val-2-title">Responsive di Semua Perangkat</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="val-2-desc">Pengalaman visual mulus dan optimal diakses dari smartphone, tablet, laptop, hingga layar ultrawide.</p>
+</div>
+<div class="p-space-8 bg-surface rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-space-6">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+</div>
+<h3 class="font-headline-sm text-primary mb-space-2" data-i18n="val-3-title">Modern & Scalable</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="val-3-desc">Dibangun menggunakan teknologi web modern terkini yang siap berkembang seiring bertambahnya trafik dan fitur.</p>
+</div>
+<div class="p-space-8 bg-surface rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-space-6">
+<span class="material-symbols-outlined text-[24px]">architecture</span>
+</div>
+<h3 class="font-headline-sm text-primary mb-space-2" data-i18n="val-4-title">Development Terstruktur</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="val-4-desc">Manajemen proyek transparan dengan milestone jelas, dokumentasi lengkap, dan komunikasi harian.</p>
+</div>
+<div class="p-space-8 bg-surface rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-space-6">
+<span class="material-symbols-outlined text-[24px]">bolt</span>
+</div>
+<h3 class="font-headline-sm text-primary mb-space-2" data-i18n="val-5-title">Performance Optimized</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="val-5-desc">Kecepatan muat halaman kilat untuk menjamin kepuasan pengguna dan peringkat SEO terbaik di mesin pencari.</p>
+</div>
+<div class="p-space-8 bg-surface rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary mb-space-6">
+<span class="material-symbols-outlined text-[24px]">support_agent</span>
+</div>
+<h3 class="font-headline-sm text-primary mb-space-2" data-i18n="val-6-title">Support Berkelanjutan</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="val-6-desc">Tim teknis selalu siap siaga memberikan pemeliharaan rutin, update keamanan, dan konsultasi lanjutan.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Preview Section -->
+<section class="py-space-24 bg-surface">
+<div class="max-w-[1280px] mx-auto px-space-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-16">
+<div>
+<span class="text-label-sm text-secondary uppercase tracking-widest font-semibold block mb-space-2" data-i18n="srv-tag">Layanan Kami</span>
+<h2 class="font-headline-lg text-headline-lg text-primary" data-i18n="srv-title">Solusi Website untuk Berbagai Kebutuhan</h2>
+</div>
+<a class="mt-space-4 md:mt-0 text-secondary font-medium flex items-center gap-space-2 hover:underline" href="#">
+<span data-i18n="srv-all">Lihat Seluruh Layanan</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-8">
+<div class="bg-surface-container-lowest rounded-xl p-space-8 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+<div>
+<div class="h-40 rounded-lg bg-cover bg-center mb-space-6" data-alt="A conversion-focused landing page mockup displayed on a modern laptop screen with crisp typography, bold call-to-action buttons, and clean white spacing." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDji_fq6NjRrUqmEWSGMwqMBVWSP9e9vNVLvh2hOCalzn_Kzot8BRDOVfM0IfK6lDAhSMPlh4OeM1JsXoxOTdrszoZvJybaWbCd6yNcpZ-cKbl3LiJuoqtFWhWBhE7cjWvjyTgIR_zMUrWhWzFJaDlxPDwZb4a2zf8AzJnUb-ObEhfd93ZlGiBeL0PjJX8n1vl8E6Uxiw3QUJ5xVdbS649QBD8R1HpKhkEVWsQjeJwxW38E_2gBZUHb')"></div>
+<span class="text-label-sm text-secondary font-semibold uppercase tracking-wider block mb-space-2">01 / High Conversion</span>
+<h3 class="font-headline-md text-primary mb-space-3" data-i18n="srv-1-name">Landing Page</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="srv-1-desc">Halaman khusus untuk kampanye pemasaran, peluncuran produk, atau lead generation dengan konversi maksimal.</p>
+</div>
+<div class="pt-space-6 mt-space-6 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-label-sm font-semibold text-primary" data-i18n="srv-duration">Estimasi 1-2 Minggu</span>
+<span class="material-symbols-outlined text-secondary">arrow_right_alt</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-8 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+<div>
+<div class="h-40 rounded-lg bg-cover bg-center mb-space-6" data-alt="Corporate company profile web interface featuring professional photography, clean grid layouts, executive team showcase, and minimalist typography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUFBEwkeDgTCa4PHvJuMc9gdEYUbAOP8uwaSxMuIP1VM48EtHbn4UIiXeTIxr0Ud3F9dn71Ph9G-otRTUfPHIUROdRYCndhG0u1UkwZemoiHJLtZwcbNAnY6z_MiFD6KuLwbn6959Rdv55X4hKKabD-KVF3jfwariKnirvAVNNQ17k6sVQLoejUn0_q_vVhJB3xKRszhE9qHfxJZjT7SavZ83d-fgnLCqWFVe8kzfT5YXB4rPTaHBM')"></div>
+<span class="text-label-sm text-secondary font-semibold uppercase tracking-wider block mb-space-2">02 / Corporate Identity</span>
+<h3 class="font-headline-md text-primary mb-space-3" data-i18n="srv-2-name">Company Profile</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="srv-2-desc">Website profesional untuk membangun kredibilitas perusahaan, menampilkan portofolio, layanan, dan profil korporat.</p>
+</div>
+<div class="pt-space-6 mt-space-6 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-label-sm font-semibold text-primary" data-i18n="srv-duration">Estimasi 2-3 Minggu</span>
+<span class="material-symbols-outlined text-secondary">arrow_right_alt</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-8 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+<div>
+<div class="h-40 rounded-lg bg-cover bg-center mb-space-6" data-alt="Financial admin dashboard showing charts, graphs, data tables, and metrics in dark navy and electric blue theme." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLqVS-9gXbKfd36vxbFEj-oHLvrLSXXuV8rJ--gJlJ_p7R_3ozUS4-gbHsykaBZ9GYYaGiCg8P9-pDw7lPu8qRn8gR7HL1oe9sD-_pSpljoYzUhlfCDeXyPu0pttXGs-QstsosBG6UIb7ANdnfUSmzGLWhVnbpcrx11itKDuUSUEJZdkjmcC3hRsb4Opcv9OXZZ8uUzAqNh73l-0Iu1j5rdGrCEnZlfMv0H-rpLYCunLIDB2zt13uM')"></div>
+<span class="text-label-sm text-secondary font-semibold uppercase tracking-wider block mb-space-2">03 / Analytics & Control</span>
+<h3 class="font-headline-md text-primary mb-space-3" data-i18n="srv-3-name">Dashboard & Finance</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="srv-3-desc">Sistem manajemen internal dan pelaporan keuangan interaktif dengan visualisasi data real-time yang aman.</p>
+</div>
+<div class="pt-space-6 mt-space-6 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-label-sm font-semibold text-primary" data-i18n="srv-duration">Estimasi 4-6 Minggu</span>
+<span class="material-symbols-outlined text-secondary">arrow_right_alt</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-8 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+<div>
+<div class="h-40 rounded-lg bg-cover bg-center mb-space-6" data-alt="Modern e-commerce product catalog showcasing minimalist fashion apparel, grid view, smooth shopping cart overlay, and clean checkout flow." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCcXq6H_r7ElfqEgSobT2p3dPn9psHatuXcaMbJZ0Zjml0hsPIybpfAeqWiMzTqxKAQnR_4FMPsnV-_IM-yGxSUMa3B5EAmPbfCg6B1kCcu9JFFVFQfQdhJ2Rt1ldrtMYtH5G1-Zg_2SZsvIZr3DN2LBDInQxyK5yQT12NRUz4BhU-KI7ZD3XwC3JTSYaDAC89Ul6FqpaKLfg-C_57KpZ5GYCIEYDOV5jx4Rjff7SsEdO3lYsaZoSrT')"></div>
+<span class="text-label-sm text-secondary font-semibold uppercase tracking-wider block mb-space-2">04 / Retail & Sales</span>
+<h3 class="font-headline-md text-primary mb-space-3" data-i18n="srv-4-name">E-Commerce & Catalog</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="srv-4-desc">Toko online lengkap dengan integrasi payment gateway, manajemen inventaris, dan kalkulasi ongkir otomatis.</p>
+</div>
+<div class="pt-space-6 mt-space-6 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-label-sm font-semibold text-primary" data-i18n="srv-duration">Estimasi 3-5 Minggu</span>
+<span class="material-symbols-outlined text-secondary">arrow_right_alt</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-8 shadow-sm hover:shadow-lg transition-all flex flex-col justify-between lg:col-span-2">
+<div>
+<div class="h-40 rounded-lg bg-cover bg-center mb-space-6" data-alt="Complex custom web application architecture schema and interactive user portal interface with high-end dark navy styling." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAT8_ji6d6Mcq8U85rUKZMbh8p08GsJQVNptnyQKpThincMcpakDfC4FxcpCuMXn99u4h4ML9rmpZDKKEXYOj06DkAFy77tKriinHCxryRb3lsfRp9O3t_yso5G7UgCuctPGO3j0WQp6a1fWmVokpCYC5VcJaL5MsSCywpjqPhJbUpT0Ec7szSZb1dzYykc0pJGqxVC3wdkOi_AzC5ofefcb4Cb5uKcb-bPTQ-AG7R9s5CASM--ds50')"></div>
+<span class="text-label-sm text-secondary font-semibold uppercase tracking-wider block mb-space-2">05 / Tailored Engineering</span>
+<h3 class="font-headline-md text-primary mb-space-3" data-i18n="srv-5-name">Custom Web Application</h3>
+<p class="font-body-md text-on-surface-variant" data-i18n="srv-5-desc">Pengembangan aplikasi web kompleks dengan alur logika khusus, integrasi API pihak ketiga, dan skalabilitas enterprise.</p>
+</div>
+<div class="pt-space-6 mt-space-6 border-t border-outline-variant/30 flex items-center justify-between">
+<span class="text-label-sm font-semibold text-primary" data-i18n="srv-duration-custom">Estimasi Disesuaikan</span>
+<span class="material-symbols-outlined text-secondary">arrow_right_alt</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Portfolio Section -->
+<section class="py-space-24 bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-space-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-16">
+<div>
+<span class="text-label-sm text-secondary uppercase tracking-widest font-semibold block mb-space-2" data-i18n="port-tag">Portfolio Unggulan</span>
+<h2 class="font-headline-lg text-headline-lg text-primary" data-i18n="port-title">Project yang Kami Bangun dengan Detail</h2>
+</div>
+<div class="flex items-center gap-space-2 mt-space-4 md:mt-0">
+<button class="px-space-4 py-2 bg-primary text-on-primary rounded-lg text-label-md font-medium" data-i18n="filter-all">Semua</button>
+<button class="px-space-4 py-2 bg-surface text-on-surface-variant rounded-lg text-label-md font-medium hover:bg-surface-container-high">Fintech</button>
+<button class="px-space-4 py-2 bg-surface text-on-surface-variant rounded-lg text-label-md font-medium hover:bg-surface-container-high">E-Commerce</button>
+<button class="px-space-4 py-2 bg-surface text-on-surface-variant rounded-lg text-label-md font-medium hover:bg-surface-container-high">SaaS</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-8">
+<div class="group relative rounded-xl overflow-hidden shadow-lg bg-surface-container-lowest">
+<div class="h-80 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Fintech mobile and web banking portal interface featuring sleek dark navy cards, balance analytics graphs, and modern typography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAVK9ZRJonRGaWwNt1a3Tt5xNJ9B2K7aXXCffrQB734_W7NgF82WoMQEroZn2G_TwY5DRK8fT6V6HhmudXTdAipkudJwiNhSlG3PKL93KqUoZxUIN7IW3DVgs47azrnssVCL-_xJwJLjNgHy9BVUhvmzPW4wPpL56P3mZkmK9HWXdC36eT92dWwSjBjxkRYRf4XoNE_CEdhzrQib_mNG-F8XR4OntSRNLCkw2Ez3y1OytYYiiizm5V9')"></div>
+<div class="p-space-8">
+<div class="flex items-center gap-space-2 mb-space-3">
+<span class="px-space-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded text-label-sm font-semibold">Fintech</span>
+<span class="px-space-3 py-1 bg-surface-container-high text-on-surface-variant rounded text-label-sm">Next.js & Tailwind</span>
+</div>
+<h3 class="font-headline-md text-primary mb-space-2">AuraPay Digital Wallet & Gateway</h3>
+<p class="font-body-md text-on-surface-variant mb-space-6">Redesign platform pembayaran digital untuk 500rb+ pengguna aktif dengan keamanan tingkat tinggi dan latensi rendah.</p>
+<a class="text-secondary font-medium flex items-center gap-space-2 hover:underline" href="#">
+<span data-i18n="port-detail">Lihat Detail Case Study</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="group relative rounded-xl overflow-hidden shadow-lg bg-surface-container-lowest">
+<div class="h-80 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Luxury furniture e-commerce website interface featuring clean minimalist product grids, high-resolution imagery, and smooth cart drawer." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDDM2emsN4r6ZjmM4fcqI8BJWBCkMn85i5mZmr9r_Jz4k2OOdiGBYQi1IdLoHhZp-8PjbHo_99Q9dN3iHCVcxll8m3u6LiATcCy3M_SCm9ZaH_KIhFmSEvHw041Ki4ihSzzDa4rfCEWkhWwOySdhq_LT_4qqZBSmej99vqXMFD2Epz9rDVBN5txkoetlF0mlF8fPrU3W_lOIpl3p-ccJ_0T2Q64g-Oz0yjSlMobJ4MUHWIB6UKUWxL5')"></div>
+<div class="p-space-8">
+<div class="flex items-center gap-space-2 mb-space-3">
+<span class="px-space-3 py-1 bg-secondary-fixed text-on-secondary-fixed rounded text-label-sm font-semibold">E-Commerce</span>
+<span class="px-space-3 py-1 bg-surface-container-high text-on-surface-variant rounded text-label-sm">Shopify Plus & React</span>
+</div>
+<h3 class="font-headline-md text-primary mb-space-2">Svadha Living Luxury Furniture</h3>
+<p class="font-body-md text-on-surface-variant mb-space-6">Pengembangan toko online premium dengan fitur 3D room preview dan peningkatan conversion rate hingga 42%.</p>
+<a class="text-secondary font-medium flex items-center gap-space-2 hover:underline" href="#">
+<span data-i18n="port-detail">Lihat Detail Case Study</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-space-24 bg-surface">
+<div class="max-w-[1280px] mx-auto px-space-8">
+<div class="text-center max-w-2xl mx-auto mb-space-16">
+<span class="text-label-sm text-secondary uppercase tracking-widest font-semibold block mb-space-2" data-i18n="proc-tag">Alur Kerja</span>
+<h2 class="font-headline-lg text-headline-lg text-primary" data-i18n="proc-title">Cara Kami Membangun Website Anda</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-6">
+<div class="p-space-6 bg-surface-container-low rounded-xl relative">
+<span class="text-headline-display text-primary/10 font-bold absolute top-4 right-4">01</span>
+<h3 class="font-headline-sm text-primary mb-space-2 relative z-10" data-i18n="p1-title">Discovery</h3>
+<p class="font-body-sm text-on-surface-variant relative z-10" data-i18n="p1-desc">Analisis mendalam kebutuhan bisnis, riset kompetitor, dan penetapan tujuan proyek.</p>
+</div>
+<div class="p-space-6 bg-surface-container-low rounded-xl relative">
+<span class="text-headline-display text-primary/10 font-bold absolute top-4 right-4">02</span>
+<h3 class="font-headline-sm text-primary mb-space-2 relative z-10" data-i18n="p2-title">Planning</h3>
+<p class="font-body-sm text-on-surface-variant relative z-10" data-i18n="p2-desc">Penyusunan sitemap, arsitektur informasi, wireframe, dan timeline pengerjaan.</p>
+</div>
+<div class="p-space-6 bg-surface-container-low rounded-xl relative">
+<span class="text-headline-display text-primary/10 font-bold absolute top-4 right-4">03</span>
+<h3 class="font-headline-sm text-primary mb-space-2 relative z-10" data-i18n="p3-title">UI/UX Design</h3>
+<p class="font-body-sm text-on-surface-variant relative z-10" data-i18n="p3-desc">Perancangan antarmuka visual high-fidelity yang elegan dan berfokus pada pengalaman pengguna.</p>
+</div>
+<div class="p-space-6 bg-surface-container-low rounded-xl relative">
+<span class="text-headline-display text-primary/10 font-bold absolute top-4 right-4">04</span>
+<h3 class="font-headline-sm text-primary mb-space-2 relative z-10" data-i18n="p4-title">Development</h3>
+<p class="font-body-sm text-on-surface-variant relative z-10" data-i18n="p4-desc">Penulisan kode bersih, responsif, dan terintegrasi dengan sistem backend yang handal.</p>
+</div>
+<div class="p-space-6 bg-surface-container-low rounded-xl relative">
+<span class="text-headline-display text-primary/10 font-bold absolute top-4 right-4">05</span>
+<h3 class="font-headline-sm text-primary mb-space-2 relative z-10" data-i18n="p5-title">Testing</h3>
+<p class="font-body-sm text-on-surface-variant relative z-10" data-i18n="p5-desc">Pengujian ketat cross-browser, kecepatan muat, keamanan, dan fungsionalitas.</p>
+</div>
+<div class="p-space-6 bg-surface-container-low rounded-xl relative">
+<span class="text-headline-display text-primary/10 font-bold absolute top-4 right-4">06</span>
+<h3 class="font-headline-sm text-primary mb-space-2 relative z-10" data-i18n="p6-title">Launch</h3>
+<p class="font-body-sm text-on-surface-variant relative z-10" data-i18n="p6-desc">Deployment ke server produksi, konfigurasi domain, dan peluncuran resmi ke publik.</p>
+</div>
+<div class="p-space-6 bg-surface-container-low rounded-xl relative lg:col-span-2">
+<span class="text-headline-display text-primary/10 font-bold absolute top-4 right-4">07</span>
+<h3 class="font-headline-sm text-primary mb-space-2 relative z-10" data-i18n="p7-title">Support</h3>
+<p class="font-body-sm text-on-surface-variant relative z-10" data-i18n="p7-desc">Pemeliharaan berkala, update keamanan, dan dukungan teknis berkelanjutan demi kelancaran operasional jangka panjang.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Preview Section -->
+<section class="py-space-24 bg-surface-container-low">
+<div class="max-w-[1280px] mx-auto px-space-8">
+<div class="text-center max-w-2xl mx-auto mb-space-16">
+<span class="text-label-sm text-secondary uppercase tracking-widest font-semibold block mb-space-2" data-i18n="price-tag">Investasi Transparan</span>
+<h2 class="font-headline-lg text-headline-lg text-primary" data-i18n="price-title">Pilih Paket Sesuai Skala Bisnis Anda</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-8">
+<div class="bg-surface rounded-xl p-space-8 shadow-sm flex flex-col justify-between">
+<div>
+<span class="text-label-sm font-semibold text-secondary uppercase tracking-wider block mb-space-2">Starter</span>
+<h3 class="font-headline-md text-primary mb-space-4">Landing Page</h3>
+<div class="mb-space-6">
+<span class="text-body-sm text-on-surface-variant" data-i18n="price-from">Mulai dari</span>
+<span class="font-headline-lg text-primary block">Rp 3.5 Juta</span>
+</div>
+<ul class="space-y-space-3 mb-space-8 font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary text-[18px]">check</span> <span data-i18n="pr-1-1">1 Halaman Responsif</span></li>
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary text-[18px]">check</span> <span data-i18n="pr-1-2">Desain Kustom Eksklusif</span></li>
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary text-[18px]">check</span> <span data-i18n="pr-1-3">Optimasi SEO Dasar</span></li>
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary text-[18px]">check</span> <span data-i18n="pr-1-4">Integrasi WhatsApp & Form</span></li>
+</ul>
+</div>
+<a class="w-full py-3 bg-surface-container-high text-primary rounded-lg text-center font-medium hover:bg-surface-container-highest transition-colors" data-i18n="price-cta" href="#">Pilih Paket</a>
+</div>
+<div class="bg-primary text-on-primary rounded-xl p-space-8 shadow-xl flex flex-col justify-between relative">
+<div class="absolute -top-3 right-8 px-space-3 py-1 bg-secondary text-on-secondary rounded-full text-label-sm font-bold" data-i18n="price-pop">Paling Populer</div>
+<div>
+<span class="text-label-sm font-semibold text-secondary-fixed-dim uppercase tracking-wider block mb-space-2">Professional</span>
+<h3 class="font-headline-md text-on-primary mb-space-4">Business Website</h3>
+<div class="mb-space-6">
+<span class="text-body-sm text-on-primary-container" data-i18n="price-from">Mulai dari</span>
+<span class="font-headline-lg text-on-primary block">Rp 7.5 Juta</span>
+</div>
+<ul class="space-y-space-3 mb-space-8 font-body-sm text-on-primary/80">
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">check</span> <span data-i18n="pr-2-1">Hingga 10 Halaman</span></li>
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">check</span> <span data-i18n="pr-2-2">CMS / Admin Dashboard</span></li>
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">check</span> <span data-i18n="pr-2-3">Optimasi Kecepatan Advanced</span></li>
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary-fixed-dim text-[18px]">check</span> <span data-i18n="pr-2-4">Integrasi Analytics & Pixel</span></li>
+</ul>
+</div>
+<a class="w-full py-3 bg-secondary text-on-secondary rounded-lg text-center font-medium hover:bg-secondary/90 transition-colors" data-i18n="price-cta" href="#">Pilih Paket</a>
+</div>
+<div class="bg-surface rounded-xl p-space-8 shadow-sm flex flex-col justify-between">
+<div>
+<span class="text-label-sm font-semibold text-secondary uppercase tracking-wider block mb-space-2">Enterprise</span>
+<h3 class="font-headline-md text-primary mb-space-4">Custom Web App</h3>
+<div class="mb-space-6">
+<span class="text-body-sm text-on-surface-variant" data-i18n="price-from">Mulai dari</span>
+<span class="font-headline-lg text-primary block">Rp 15 Juta+</span>
+</div>
+<ul class="space-y-space-3 mb-space-8 font-body-sm text-on-surface-variant">
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary text-[18px]">check</span> <span data-i18n="pr-3-1">Unlimited Halaman & Fitur</span></li>
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary text-[18px]">check</span> <span data-i18n="pr-3-2">Custom Backend & Database</span></li>
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary text-[18px]">check</span> <span data-i18n="pr-3-3">API Integration Pihak Ketiga</span></li>
+<li class="flex items-center gap-space-2"><span class="material-symbols-outlined text-secondary text-[18px]">check</span> <span data-i18n="pr-3-4">Dedicated Project Manager</span></li>
+</ul>
+</div>
+<a class="w-full py-3 bg-surface-container-high text-primary rounded-lg text-center font-medium hover:bg-surface-container-highest transition-colors" data-i18n="price-cta" href="#">Pilih Paket</a>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Accordion Section -->
+<section class="py-space-24 bg-surface">
+<div class="max-w-[800px] mx-auto px-space-8">
+<div class="text-center mb-space-16">
+<span class="text-label-sm text-secondary uppercase tracking-widest font-semibold block mb-space-2" data-i18n="faq-tag">FAQ</span>
+<h2 class="font-headline-lg text-headline-lg text-primary" data-i18n="faq-title">Pertanyaan yang Sering Diajukan</h2>
+</div>
+<div class="space-y-space-4">
+<details class="group bg-surface-container-low rounded-xl p-space-6 cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-primary">
+<span data-i18n="faq-q1">Berapa lama waktu pengerjaan sebuah website?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-on-surface-variant mt-space-4 pt-space-4 border-t border-outline-variant/30" data-i18n="faq-a1">
+            Waktu pengerjaan bervariasi tergantung kompleksitas. Landing page umumnya memakan waktu 1-2 minggu, company profile 2-3 minggu, dan aplikasi web custom dapat memakan waktu 4-8 minggu.
+          </p>
+</details>
+<details class="group bg-surface-container-low rounded-xl p-space-6 cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-primary">
+<span data-i18n="faq-q2">Apakah saya bisa memperbarui konten website sendiri?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-on-surface-variant mt-space-4 pt-space-4 border-t border-outline-variant/30" data-i18n="faq-a2">
+            Tentu saja. Kami menyediakan Content Management System (CMS) yang ramah pengguna serta pelatihan singkat agar Anda dapat mengubah teks, gambar, dan menambah artikel dengan mudah.
+          </p>
+</details>
+<details class="group bg-surface-container-low rounded-xl p-space-6 cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-primary">
+<span data-i18n="faq-q3">Apakah website dijamin responsif di semua perangkat?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-on-surface-variant mt-space-4 pt-space-4 border-t border-outline-variant/30" data-i18n="faq-a3">
+            Ya, seluruh website yang kami kembangkan menggunakan pendekatan mobile-first design, menjamin tampilan yang sempurna dan fungsionalitas optimal di smartphone, tablet, maupun desktop.
+          </p>
+</details>
+<details class="group bg-surface-container-low rounded-xl p-space-6 cursor-pointer">
+<summary class="flex items-center justify-between font-headline-sm text-primary">
+<span data-i18n="faq-q4">Bagaimana sistem pembayaran dan garansi project?</span>
+<span class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<p class="font-body-md text-on-surface-variant mt-space-4 pt-space-4 border-t border-outline-variant/30" data-i18n="faq-a4">
+            Pembayaran dibagi secara bertahap (milestone), umumnya 50% di awal dan 50% setelah project selesai. Kami juga memberikan garansi pemeliharaan teknis selama 3 bulan pasca peluncuran.
+          </p>
+</details>
+</div>
+</div>
+</section>
+<!-- Bottom CTA Section -->
+<section class="py-space-24 bg-primary text-on-primary relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-secondary/20 via-transparent to-transparent pointer-events-none"></div>
+<div class="max-w-[1280px] mx-auto px-space-8 text-center relative z-10">
+<h2 class="font-headline-display text-headline-display mb-space-6 max-w-2xl mx-auto" data-i18n="bot-title">Siap Membangun Website Impian untuk Bisnis Anda?</h2>
+<p class="font-body-lg text-on-primary/80 max-w-xl mx-auto mb-space-8" data-i18n="bot-desc">Konsultasikan kebutuhan digital Anda bersama tim ahli kami sekarang dan dapatkan estimasi gratis.</p>
+<div class="flex items-center justify-center gap-space-4">
+<a class="px-space-8 py-4 bg-secondary text-on-secondary rounded-lg font-medium hover:bg-secondary/90 transition-all text-label-md shadow-lg" data-i18n="bot-cta" href="#">Mulai Konsultasi Sekarang</a>
+</div>
+</div>
+</section>
+</div>
+<script>
+  const translations = {
+    id: {
+      "hero-badge": "Digital Studio & Web Engineering",
+      "hero-title": "Website Profesional untuk Membawa Bisnis Anda Lebih Jauh",
+      "hero-desc": "Kami merancang dan mengembangkan web berstandar tinggi dengan performa luar biasa, desain elegan, dan struktur terukur untuk mendongkrak konversi bisnis Anda.",
+      "cta-consult": "Konsultasi Gratis",
+      "cta-portfolio": "Lihat Portfolio",
+      "stat-1": "Project Selesai",
+      "stat-2": "Klien Puas",
+      "stat-3": "Pengalaman Industri",
+      "mockup-title": "Enterprise Analytics V2",
+      "metric-revenue": "Monthly Revenue",
+      "metric-conversion": "Conversion Rate",
+      "val-tag": "Mengapa IFDigital?",
+      "val-title": "Standar Tertinggi untuk Pertumbuhan Bisnis Digital",
+      "val-1-title": "Custom Sesuai Kebutuhan",
+      "val-1-desc": "Solusi dirancang dari nol secara spesifik menyesuaikan model bisnis dan identitas brand Anda tanpa template pasaran.",
+      "val-2-title": "Responsive di Semua Perangkat",
+      "val-2-desc": "Pengalaman visual mulus dan optimal diakses dari smartphone, tablet, laptop, hingga layar ultrawide.",
+      "val-3-title": "Modern & Scalable",
+      "val-3-desc": "Dibangun menggunakan teknologi web modern terkini yang siap berkembang seiring bertambahnya trafik dan fitur.",
+      "val-4-title": "Development Terstruktur",
+      "val-4-desc": "Manajemen proyek transparan dengan milestone jelas, dokumentasi lengkap, dan komunikasi harian.",
+      "val-5-title": "Performance Optimized",
+      "val-5-desc": "Kecepatan muat halaman kilat untuk menjamin kepuasan pengguna dan peringkat SEO terbaik di mesin pencari.",
+      "val-6-title": "Support Berkelanjutan",
+      "val-6-desc": "Tim teknis selalu siap siaga memberikan pemeliharaan rutin, update keamanan, dan konsultasi lanjutan.",
+      "srv-tag": "Layanan Kami",
+      "srv-title": "Solusi Website untuk Berbagai Kebutuhan",
+      "srv-all": "Lihat Seluruh Layanan",
+      "srv-1-name": "Landing Page",
+      "srv-1-desc": "Halaman khusus untuk kampanye pemasaran, peluncuran produk, atau lead generation dengan konversi maksimal.",
+      "srv-2-name": "Company Profile",
+      "srv-2-desc": "Website profesional untuk membangun kredibilitas perusahaan, menampilkan portofolio, layanan, dan profil korporat.",
+      "srv-3-name": "Dashboard & Finance",
+      "srv-3-desc": "Sistem manajemen internal dan pelaporan keuangan interaktif dengan visualisasi data real-time yang aman.",
+      "srv-4-name": "E-Commerce & Catalog",
+      "srv-4-desc": "Toko online lengkap dengan integrasi payment gateway, manajemen inventaris, dan kalkulasi ongkir otomatis.",
+      "srv-5-name": "Custom Web Application",
+      "srv-5-desc": "Pengembangan aplikasi web kompleks dengan alur logika khusus, integrasi API pihak ketiga, dan skalabilitas enterprise.",
+      "srv-duration": "Estimasi 1-3 Minggu",
+      "srv-duration-custom": "Estimasi Disesuaikan",
+      "port-tag": "Portfolio Unggulan",
+      "port-title": "Project yang Kami Bangun dengan Detail",
+      "filter-all": "Semua",
+      "port-detail": "Lihat Detail Case Study",
+      "proc-tag": "Alur Kerja",
+      "proc-title": "Cara Kami Membangun Website Anda",
+      "p1-title": "Discovery",
+      "p1-desc": "Analisis mendalam kebutuhan bisnis, riset kompetitor, dan penetapan tujuan proyek.",
+      "p2-title": "Planning",
+      "p2-desc": "Penyusunan sitemap, arsitektur informasi, wireframe, dan timeline pengerjaan.",
+      "p3-title": "UI/UX Design",
+      "p3-desc": "Perancangan antarmuka visual high-fidelity yang elegan dan berfokus pada pengalaman pengguna.",
+      "p4-title": "Development",
+      "p4-desc": "Penulisan kode bersih, responsif, dan terintegrasi dengan sistem backend yang handal.",
+      "p5-title": "Testing",
+      "p5-desc": "Pengujian ketat cross-browser, kecepatan muat, keamanan, dan fungsionalitas.",
+      "p6-title": "Launch",
+      "p6-desc": "Deployment ke server produksi, konfigurasi domain, dan peluncuran resmi ke publik.",
+      "p7-title": "Support",
+      "p7-desc": "Pemeliharaan berkala, update keamanan, dan dukungan teknis berkelanjutan demi kelancaran operasional jangka panjang.",
+      "price-tag": "Investasi Transparan",
+      "price-title": "Pilih Paket Sesuai Skala Bisnis Anda",
+      "price-from": "Mulai dari",
+      "price-pop": "Paling Populer",
+      "pr-1-1": "1 Halaman Responsif",
+      "pr-1-2": "Desain Kustom Eksklusif",
+      "pr-1-3": "Optimasi SEO Dasar",
+      "pr-1-4": "Integrasi WhatsApp & Form",
+      "pr-2-1": "Hingga 10 Halaman",
+      "pr-2-2": "CMS / Admin Dashboard",
+      "pr-2-3": "Optimasi Kecepatan Advanced",
+      "pr-2-4": "Integrasi Analytics & Pixel",
+      "pr-3-1": "Unlimited Halaman & Fitur",
+      "pr-3-2": "Custom Backend & Database",
+      "pr-3-3": "API Integration Pihak Ketiga",
+      "pr-3-4": "Dedicated Project Manager",
+      "price-cta": "Pilih Paket",
+      "faq-tag": "FAQ",
+      "faq-title": "Pertanyaan yang Sering Diajukan",
+      "faq-q1": "Berapa lama waktu pengerjaan sebuah website?",
+      "faq-a1": "Waktu pengerjaan bervariasi tergantung kompleksitas. Landing page umumnya memakan waktu 1-2 minggu, company profile 2-3 minggu, dan aplikasi web custom dapat memakan waktu 4-8 minggu.",
+      "faq-q2": "Apakah saya bisa memperbarui konten website sendiri?",
+      "faq-a2": "Tentu saja. Kami menyediakan Content Management System (CMS) yang ramah pengguna serta pelatihan singkat agar Anda dapat mengubah teks, gambar, dan menambah artikel dengan mudah.",
+      "faq-q3": "Apakah website dijamin responsif di semua perangkat?",
+      "faq-a3": "Ya, seluruh website yang kami kembangkan menggunakan pendekatan mobile-first design, menjamin tampilan yang sempurna dan fungsionalitas optimal di smartphone, tablet, maupun desktop.",
+      "faq-q4": "Bagaimana sistem pembayaran dan garansi project?",
+      "faq-a4": "Pembayaran dibagi secara bertahap (milestone), umumnya 50% di awal dan 50% setelah project selesai. Kami juga memberikan garansi pemeliharaan teknis selama 3 bulan pasca peluncuran.",
+      "bot-title": "Siap Membangun Website Impian untuk Bisnis Anda?",
+      "bot-desc": "Konsultasikan kebutuhan digital Anda bersama tim ahli kami sekarang dan dapatkan estimasi gratis.",
+      "bot-cta": "Mulai Konsultasi Sekarang"
+    },
+    en: {
+      "hero-badge": "Digital Studio & Web Engineering",
+      "hero-title": "Professional Websites to Take Your Business Further",
+      "hero-desc": "We design and engineer high-end web solutions with exceptional performance, elegant aesthetics, and structured scalability to boost your business conversions.",
+      "cta-consult": "Free Consultation",
+      "cta-portfolio": "View Portfolio",
+      "stat-1": "Completed Projects",
+      "stat-2": "Satisfied Clients",
+      "stat-3": "Years of Experience",
+      "mockup-title": "Enterprise Analytics V2",
+      "metric-revenue": "Monthly Revenue",
+      "metric-conversion": "Conversion Rate",
+      "val-tag": "Why IFDigital?",
+      "val-title": "The Highest Standard for Digital Business Growth",
+      "val-1-title": "Custom Tailored",
+      "val-1-desc": "Solutions built completely from scratch to specifically match your business model and brand identity without generic templates.",
+      "val-2-title": "Fully Responsive",
+      "val-2-desc": "Seamless and optimal visual experience across smartphones, tablets, laptops, and ultrawide screens.",
+      "val-3-title": "Modern & Scalable",
+      "val-3-desc": "Built using cutting-edge web technologies ready to scale alongside your traffic and feature growth.",
+      "val-4-title": "Structured Development",
+      "val-4-desc": "Transparent project management with clear milestones, thorough documentation, and daily updates.",
+      "val-5-title": "Performance Optimized",
+      "val-5-desc": "Lightning-fast page loading speeds to guarantee user satisfaction and top search engine rankings.",
+      "val-6-title": "Continuous Support",
+      "val-6-desc": "Dedicated technical team on standby providing regular maintenance, security patches, and ongoing consultations.",
+      "srv-tag": "Our Services",
+      "srv-title": "Web Solutions for Every Need",
+      "srv-all": "View All Services",
+      "srv-1-name": "Landing Page",
+      "srv-1-desc": "Dedicated pages for marketing campaigns, product launches, or lead generation optimized for maximum conversion.",
+      "srv-2-name": "Company Profile",
+      "srv-2-desc": "Professional corporate websites to build brand credibility, showcase portfolios, services, and company story.",
+      "srv-3-name": "Dashboard & Finance",
+      "srv-3-desc": "Internal management systems and interactive financial reporting dashboards with secure real-time data visualization.",
+      "srv-4-name": "E-Commerce & Catalog",
+      "srv-4-desc": "Full online stores featuring secure payment gateway integration, inventory management, and automated shipping calculators.",
+      "srv-5-name": "Custom Web Application",
+      "srv-5-desc": "Complex web application development with specialized logic workflows, third-party API integration, and enterprise scale.",
+      "srv-duration": "Est. 1-3 Weeks",
+      "srv-duration-custom": "Custom Estimate",
+      "port-tag": "Featured Portfolio",
+      "port-title": "Projects Crafted with Precision",
+      "filter-all": "All",
+      "port-detail": "View Case Study",
+      "proc-tag": "Workflow",
+      "proc-title": "How We Build Your Website",
+      "p1-title": "Discovery",
+      "p1-desc": "In-depth business needs analysis, competitor research, and project goal setting.",
+      "p2-title": "Planning",
+      "p2-desc": "Sitemap creation, information architecture, wireframing, and timeline scheduling.",
+      "p3-title": "UI/UX Design",
+      "p3-desc": "High-fidelity visual interface design focused on elegance and intuitive user experience.",
+      "p4-title": "Development",
+      "p4-desc": "Writing clean, responsive code integrated securely with robust backend systems.",
+      "p5-title": "Testing",
+      "p5-desc": "Rigorous cross-browser, speed, security, and functionality quality assurance.",
+      "p6-title": "Launch",
+      "p6-desc": "Production server deployment, domain configuration, and public release.",
+      "p7-title": "Support",
+      "p7-desc": "Ongoing maintenance, security updates, and technical assistance for long-term operational success.",
+      "price-tag": "Transparent Pricing",
+      "price-title": "Choose the Right Package for Your Business",
+      "price-from": "Starting from",
+      "price-pop": "Most Popular",
+      "pr-1-1": "1 Responsive Page",
+      "pr-1-2": "Exclusive Custom Design",
+      "pr-1-3": "Basic SEO Optimization",
+      "pr-1-4": "WhatsApp & Form Integration",
+      "pr-2-1": "Up to 10 Pages",
+      "pr-2-2": "CMS / Admin Dashboard",
+      "pr-2-3": "Advanced Speed Optimization",
+      "pr-2-4": "Analytics & Pixel Integration",
+      "pr-3-1": "Unlimited Pages & Features",
+      "pr-3-2": "Custom Backend & Database",
+      "pr-3-3": "Third-party API Integration",
+      "pr-3-4": "Dedicated Project Manager",
+      "price-cta": "Select Package",
+      "faq-tag": "FAQ",
+      "faq-title": "Frequently Asked Questions",
+      "faq-q1": "How long does it take to build a website?",
+      "faq-a1": "Timelines vary by complexity. Landing pages typically take 1-2 weeks, company profiles 2-3 weeks, and custom web applications take 4-8 weeks.",
+      "faq-q2": "Can I update the website content myself?",
+      "faq-a2": "Absolutely. We provide a user-friendly Content Management System (CMS) along with a brief training session so you can easily edit text, images, and add new articles.",
+      "faq-q3": "Is the website guaranteed to be responsive across all devices?",
+      "faq-a3": "Yes, all websites we develop use a mobile-first design approach, ensuring flawless layouts and optimal performance on smartphones, tablets, and desktops.",
+      "faq-q4": "What is the payment structure and project warranty?",
+      "faq-a4": "Payments are split across milestones, typically 50% upfront and 50% upon project completion. We also include a 3-month technical maintenance warranty post-launch.",
+      "bot-title": "Ready to Build Your Dream Website?",
+      "bot-desc": "Consult your digital requirements with our expert team today and get a free estimate.",
+      "bot-cta": "Start Free Consultation"
+    }
+  };
+
+  let currentLang = 'id';
+
+  const langToggle = document.querySelector('header .relative.flex.items-center');
+  if (langToggle) {
+    langToggle.addEventListener('click', () => {
+      currentLang = currentLang === 'id' ? 'en' : 'id';
+      const labelSpan = langToggle.querySelector('span');
+      if (labelSpan) {
+        labelSpan.textContent = currentLang === 'id' ? '🇮🇩 ID' : '🇺🇸 EN';
+      }
+      
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[currentLang][key]) {
+          el.textContent = translations[currentLang][key];
+        }
+      });
+    });
+  }
+</script></main><footer class="w-full bg-surface-container-low py-space-12"><div class="max-w-[1280px] mx-auto px-space-8 grid grid-cols-1 md:grid-cols-4 gap-space-8"><div class="flex flex-col gap-space-4"><span class="text-headline-sm text-primary font-bold">IFDigital</span><p class="text-body-sm text-on-surface-variant">Digital agency specializing in high-end web development, design, and strategic digital solutions.</p></div><div class="flex flex-col gap-space-2"><span class="text-label-md font-bold text-on-surface mb-space-2">Layanan</span><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Web Development</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">UI/UX Design</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Digital Marketing</a></div><div class="flex flex-col gap-space-2"><span class="text-label-md font-bold text-on-surface mb-space-2">Tautan Cepat</span><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Portfolio</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Harga</a><a class="text-body-sm text-on-surface-variant hover:text-on-surface" href="#">Tentang Kami</a></div><div class="flex flex-col gap-space-2"><span class="text-label-md font-bold text-on-surface mb-space-2">Kontak</span><span class="text-body-sm text-on-surface-variant">hello@ifdigital.id</span><span class="text-body-sm text-on-surface-variant">+62 21 5558 9999</span></div></div><div class="max-w-[1280px] mx-auto px-space-8 mt-space-8 pt-space-6 border-t border-outline-variant/30 text-center text-on-surface-variant text-label-sm">© 2024 IFDigital. All rights reserved.</div></footer></body></html>
